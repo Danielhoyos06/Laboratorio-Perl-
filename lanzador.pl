@@ -19,7 +19,7 @@ chomp($Path);
 
 @Num_Hilos = (1,2);
 
-$Repeticiones = 4;
+$Repeticiones = 30;
 
 foreach $Nombre_Ejecutable (@Nombre_Ejecutable) {
     foreach $size (@Size_Matriz) {
