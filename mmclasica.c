@@ -1,10 +1,22 @@
+
+/**************************************************************
+                Pontificia Universidad Javeriana
+        Autor: Daniel Hoyps
+        Fecha: Abril 2025
+        Materia: Sistemas Operativos
+        Tema: laboratorio en perl
+        Fichero: Archivo que contiene las funciones a usar.
+        Objetivo: despliegue de desarollo de funciones que seran implementadas en el archivo mainclasica.c y mmclasica.h
+****************************************************************/
+
+
 #include "mmclasica.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/time.h>
 #include <time.h>
 
-// Variables compartidas entre archivos
+
 pthread_mutex_t MM_mutex;
  double MEM_CHUNK[DATA_SIZE]; // Bloque grande de memoria estática
 
@@ -21,7 +33,7 @@ void llenar_matriz(int SZ) {
     }
 }
 
-// Imprime una matriz si es pequeña (para evitar saturar pantalla)
+// Imprime las matrices llenadas
 void print_matrix(int sz, double *matriz) {
     if (sz < 12) {
         for (int i = 0; i < sz * sz; i++) {
@@ -69,7 +81,7 @@ void *mult_thread(void *variables) {
         }
     }
 
-    // Mutex bloqueado y desbloqueado para sincronización mínima
+    // Mutex bloqueado y desbloqueado para sincronización
     pthread_mutex_lock(&MM_mutex);
     pthread_mutex_unlock(&MM_mutex);
 
