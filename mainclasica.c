@@ -1,3 +1,15 @@
+
+/**************************************************************
+                Pontificia Universidad Javeriana
+        Autor: Daniel Hoyps
+        Fecha: Abril 2025
+        Materia: Sistemas Operativos
+        Tema: laboratorio en perl
+        Fichero: Archivo main en el cual se llaman las funciones desarrolladas en mmclasica.c y definidas en mmclasica.h.
+        Objetivo: multiplicacion de matrices mediante la entrada de las filas x columnas, y los hilos 
+****************************************************************/
+
+
 #include "mmclasica.h"       // Archivo de cabecera con variables y funciones declaradas
 #include <stdio.h>           // Para funciones de entrada/salida
 #include <stdlib.h>          // Para uso de atoi, malloc, etc.
